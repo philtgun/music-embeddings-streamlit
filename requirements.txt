@@ -1,1 +1,5 @@
+plotly==4.14.3
+scikit-learn==0.24.1
 # Only add explicit dependencies with dep==version
+streamlit==0.79.0
+umap-learn==0.5.1
