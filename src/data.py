@@ -2,6 +2,7 @@ import random
 from pathlib import Path
 
 import numpy as np
+import streamlit as st
 from sklearn.manifold import TSNE
 from umap import UMAP
 
@@ -10,6 +11,7 @@ class Loader:
     def __init__(self, data_dir: Path):
         self.data_dir = data_dir
 
+    @st.cache
     def load_embeddings(
             self,
             dataset: str,

@@ -30,7 +30,7 @@ def model_controls(suffix):
     with cols[1]:
         dataset = st.selectbox('Dataset', datasets, key=f'dataset-{suffix}')
 
-    layers = ['Embeddings'] + ['Taggrams'] if architecture != 'VGGish' else []
+    layers = ['Embeddings'] + (['Taggrams'] if architecture != 'VGGish' else [])
     layer = st.selectbox('Layer', layers, key=f'layer-{suffix}')
 
     return architecture, dataset, layer
